@@ -36,6 +36,8 @@ public class SimpleHttpServer {
             
             // 设置响应头
             exchange.getResponseHeaders().set("Content-Type", "text/plain");
+            exchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
+            exchange.getResponseHeaders().set("access-control-allow-headers", "*");
             
             // 发送响应代码和内容
             exchange.sendResponseHeaders(200, response.length());
